@@ -31,25 +31,27 @@ print(find_smallest)
 # place (i.e., without creating a new list).
 
 def reverse_list(numbers):
-    print(numbers.reverse())
-    # start, end = 0, len(numbers) - 1
-    # while start < end:
-    #     numbers[start], numbers[end] = numbers[end], numbers[start]
-    #     start += 1
-    #     end -= 1
-# numbers = ([4,7,8,10,1,3])
+  numbers.reverse()
+  print(numbers)
+
 reverse_list([4,7,8,10,1,3])
-# print(reverse_list)
+
 
 # Write a function to remove all duplicates from a list.        
         
-def remove_duplicates(lst):
+def remove_duplicates(numbers):
     seen = set()
     i = 0
-    while i < len(lst):
-        if lst[i] in seen:
-            lst.pop(i)
+    while i < len(numbers):
+        if numbers[i] in seen:
+            numbers.pop(i)
         else:
-            seen.add(lst[i])
+            seen.add(numbers[i])
             i += 1
+            
+    return numbers
+            
+numbers= [65,30,2,40,56,40,2,65]    
+print(remove_duplicates(numbers))
+
                     
